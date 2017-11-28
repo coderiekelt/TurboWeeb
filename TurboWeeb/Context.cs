@@ -12,6 +12,12 @@ namespace TurboWeeb
 
         private static string SaveLocation;
 
+        public static void HandleException(Exception exception)
+        {
+            FormException exceptionForm = new FormException(exception);
+            exceptionForm.Show();
+        }
+
         public static void Load(bool minimize = true)
         {
             if (minimize)
